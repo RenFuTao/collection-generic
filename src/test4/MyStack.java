@@ -1,5 +1,33 @@
 package test4;
 
-public class MyStack {
+import java.util.*;
 
+public class MyStack {
+	LinkedList linkedlist = new LinkedList();
+	public void push(Object obj) {
+		linkedlist.addFirst(obj);
+	}
+	public Object pop() {
+		return linkedlist.removeFirst();
+	}
+	public Object peek() {
+		return linkedlist.getFirst();
+	}
+	public boolean empty() {
+		return linkedlist.isEmpty();
+	}
+	public String toString() {
+		return linkedlist.toString();
+	}
+	public static void main(String[] args) {
+		MyStack ms = new MyStack();
+		ms.push("Jack");
+		ms.push("Fiona");
+		ms.push("Tom");
+		System.out.println(ms);
+		System.out.println(ms.pop());
+		System.out.println(ms.peek());
+		System.out.println(ms.empty());
+		System.out.println(ms);
+	}
 }
