@@ -1,4 +1,5 @@
 package test5;
+
 public class Student implements Comparable<Student> {
 	private int num;
 	private String name;
@@ -29,11 +30,10 @@ public class Student implements Comparable<Student> {
 	public double getscore() {
 		return score;
 	}
-	
 	public String toString() {
 		return "{学号:"+num+"   姓名:" +name+"   综合成绩:"+score+"}";
 	}
-	
+	//按学号从小到大排列
 	public int compareTo(Student o) {
 		// TODO Auto-generated method stub
  		return this.num-o.num;
