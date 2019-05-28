@@ -1,13 +1,15 @@
 package test5;
-
-public class Student {
+public class Student implements Comparable<Student> {
 	private int num;
 	private String name;
 	private double score;
 	public Student(int num,String name,double score) {
-		this.name= name;
 		this.num = num;
+		this.name= name;
 		this.score = score;	
+	}
+	public Student() {
+		// TODO Auto-generated constructor stub
 	}
 	public void setnum(int num) {
 		this.num = num;
@@ -27,4 +29,15 @@ public class Student {
 	public double getscore() {
 		return score;
 	}
+	
+	public String toString() {
+		return "{学号:"+num+"   姓名:" +name+"   综合成绩:"+score+"}";
+	}
+	
+	public int compareTo(Student o) {
+		// TODO Auto-generated method stub
+ 		return this.num-o.num;
+
+	}
+
 }
