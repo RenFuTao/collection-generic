@@ -28,6 +28,6 @@ public class Teacher {
 
  	
 	public String toString() {
-		return "{½ÌÊ¦±àºÅ:"+Tnum+"   ½ÌÊ¦ÐÕÃû:" +Tname+"}";
+		return "Teacher [Tname=" + Tname + ", Tnum=" + Tnum + "]";       
 	}
 }
